@@ -1,0 +1,212 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body styling */
+  body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 1rem; /* Padding to ensure some space on small devices */
+  }
+  
+  /* Login container */
+  .login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .login-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .small{
+    margin-bottom: 1rem;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Input field styling */
+  .form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  .form-group button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 600px) {
+    .login-container {
+      width: 100%;
+      padding: 1.5rem;
+    }
+  
+    .login-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .form-group input,
+    .form-group button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Responsive design for larger screens */
+  @media (min-width: 601px) and (max-width: 768px) {
+    .login-container {
+      width: 90%;
+      padding: 2rem;
+    }
+  
+    .login-container h2 {
+      font-size: 1.7rem;
+    }
+  
+    .form-group input,
+    .form-group button {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Ensure container fits within viewport */
+  @media (max-width: 400px) {
+    .login-container {
+      padding: 1rem;
+    }
+  
+    .login-container h2 {
+      font-size: 1.4rem;
+    }
+  
+    .form-group input,
+    .form-group button {
+      font-size: 0.875rem;
+    }
+  }
+
+/* Password container */
+.password-container {
+    position: relative;
+  }
+  
+  .password-container input {
+    width: calc(100% - 80px); /* Adjust width to accommodate the button */
+    padding-right: 80px; /* Space for the toggle button */
+  }
+  
+  .password-container button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border: none;
+    background: #007bff;
+    color: white;
+    padding: 0 1rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .password-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Remember Me,show password checkbox styling */
+  .form-group input[type="checkbox"] {
+    margin-right: 0.4rem;
+  }
+  
+  /* Loading spinner styling */
+  .loading-spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #007bff; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-top: 1rem;
+  }
+  
+  /* Spinner animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+ 
+.toggle-password-label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password-label input {
+    margin-right: 5px;
+}
+
+/* General styling for checkboxes within form groups */
+.form-group input[type="checkbox"] {
+    margin-right: 0.4rem;
+    accent-color: #4CAF50; /* Optional: Adjust checkbox color if needed */
+}
+
+/* Specific styling for the Show Password label */
+.toggle-password-label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Optional: Space out from the password field */
+}

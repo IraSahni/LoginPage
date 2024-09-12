@@ -210,3 +210,16 @@
     align-items: center;
     margin-top: 10px; /* Optional: Space out from the password field */
 }
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Error input styling */
+.error-input {
+  border-color: red;
+}
+
